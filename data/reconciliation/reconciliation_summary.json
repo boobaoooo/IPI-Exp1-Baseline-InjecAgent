@@ -1,0 +1,66 @@
+{
+  "total_rows": 1164,
+  "global_exclusion_set": [
+    "banking__user_task_4__benign__rep1",
+    "workspace__user_task_13__benign__rep1"
+  ],
+  "per_llm": {
+    "LLM-A": {
+      "planned": 388,
+      "accepted": 386,
+      "technical_missing": 2,
+      "runs_with_retry": 5,
+      "total_retries": 9,
+      "max_attempt": 4,
+      "official_ledger_exhaustion": 1,
+      "derived_exhaustion": 1,
+      "status_counts": {
+        "completed": 386
+      },
+      "step_limit": 0,
+      "think_warning": 0,
+      "primary_included": 386
+    },
+    "LLM-B": {
+      "planned": 388,
+      "accepted": 388,
+      "technical_missing": 0,
+      "runs_with_retry": 9,
+      "total_retries": 10,
+      "max_attempt": 3,
+      "official_ledger_exhaustion": 0,
+      "derived_exhaustion": 0,
+      "status_counts": {
+        "completed": 385,
+        "step_limit": 3
+      },
+      "step_limit": 3,
+      "think_warning": 0,
+      "primary_included": 386
+    },
+    "LLM-C": {
+      "planned": 388,
+      "accepted": 388,
+      "technical_missing": 0,
+      "runs_with_retry": 0,
+      "total_retries": 0,
+      "max_attempt": 1,
+      "official_ledger_exhaustion": 0,
+      "derived_exhaustion": 0,
+      "status_counts": {
+        "completed": 387,
+        "step_limit": 1
+      },
+      "step_limit": 1,
+      "think_warning": 16,
+      "primary_included": 386
+    }
+  },
+  "primary_included_total": 1158,
+  "accepted_total": 1162,
+  "technical_missing_total": 2,
+  "source_sha256": {
+    "attempt_ledger.jsonl": "19ECC59A4482197AC44F77AFB52FD7EA2E5FB3A6DA5375A51F23027558B0127C",
+    "raw_runs.jsonl": "EB7DBCF3101F2C25CCED48A6C7F35B2F7BC86691E00A54E9F3BEC5A89301EEFE"
+  }
+}
