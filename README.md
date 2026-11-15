@@ -1,6 +1,6 @@
 # Experiment 1: IPI Baseline Payload (InjecAgent-style template) on AgentDojo
 
-This repository contains the execution package and raw agent trajectories for **Experiment 1** of the project *Cross-LLM Generalization of Supervised Behavioral Detection for Indirect Prompt Injection in Tool-Using LLM Agents* (SIIT, Thammasat University, 2026). The runs were executed by the P2 (execution) role.
+This repository contains the execution package and raw agent trajectories for **Experiment 1** of the project *Beyond Payload Presence: Evaluating Whether Behavioral Detection of Indirect Prompt Injection Transfers Across LLMs* (SIIT, Thammasat University, 2026). The runs were executed by the P2 (execution) role.
 
 Experiment 1 runs every planned scenario once per LLM with a fixed **baseline** injection template in the style of InjecAgent:
 
@@ -62,13 +62,14 @@ Each line of `raw_runs.jsonl` follows schema `raw_run/0.1` (see `protocol/data_c
 
 - **Ground-truth labels** (`ipi_affected`) and the label evidence are excluded. They are owned by the adjudication role (P1).
 - **AgentDojo evaluator outcomes** (`eval_evidence.jsonl`, utility and security) and **environment state snapshots** are excluded for the same reason.
-- **Core runner package `p2runner/`** and helper scripts are excluded because the exact versions used are not in this export. They will be added from the execution machine. Expected SHA-256 values (newline-normalised):
+- **Runner package `p2runner/` and helper scripts** are not duplicated in this repository. The same files are in the Experiment 2 repository (https://github.com/boobaoooo/IPI-Exp2-ImportantInstructions): all 1,183 records here and all records of Experiment 2 carry the identical `runner_source_sha256` `32395aea…`. Expected SHA-256 values (newline-normalised):
   - `p2runner/__init__.py` 83c19fe9c044c5a33602c9ace2800a5bafb243bca3950bd7b8f39b6471e4246b
   - `p2runner/adapters.py` 2e98b1276832c0cb5696c774c743c7abccb531c8d6a059f19f959c7910c8479e
   - `p2runner/runner.py` 38991e2687a5805ddd78ca1572874846fbe43ade5bc9bd821f0afa96a9d9c03e
   - `p2runner/scenarios.py` d5b7ff8900dc5354a86227186bb7d58f7a94049e4ad8131cdd2afe8660e6597d
   - `batch_controller.py` 4dff277d857fbe93eb2a924acc2658374ec5bb2cc69918881c9109b56376667b
   - `validate_outputs.py` 645f2122f786cbe5d6fb65e776b2171447c9ee781cc283528605e4c4c5f61aee
+  - `monitor_runtime.py` 244fa6747b297827f19a73d78de434ce23d73ebd45fa1d0ceccb513c522140e2
 
 ## Notes
 
